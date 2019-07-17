@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const MONGO_URL = "mongodb://localhost:27017/bazar";
+const MONGO_URL = process.env.MONGODB_URI || "mongodb://bazar:bazar10@ds231377.mlab.com:31377/projeto-teste";
 
 function connect () {
     mongoose.connect(MONGO_URL, {useNewUrlParser: true},

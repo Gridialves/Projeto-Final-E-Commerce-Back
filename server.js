@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const controller = require('./apizController')
 const cors = require('cors')
+const port = process.env.PORT || 3000
 
 const servidor = express()
 servidor.use(cors())
@@ -69,5 +70,5 @@ servidor.delete('/bazar/:id', (request, response) => {
     })
 })
 
-servidor.listen(3000)
+servidor.listen(port)
 console.log("servidor rodando na porta 3000")
